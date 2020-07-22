@@ -17,8 +17,8 @@ class Dhrm2197ApplicationTests {
     @Test
     void contextLoads() {
 
-        User test = userMapper.login("test", "123");
-        System.out.println(test.toString());
+//        User test = userMapper.login("test", "123");
+//        System.out.println(test.toString());
         List<User> userList = userMapper.getUserList();
         for(User u : userList){
             System.out.println(u.toString());

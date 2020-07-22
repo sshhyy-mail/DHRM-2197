@@ -7,7 +7,11 @@
     </select>
 
     <select id="getUserList" resultType="com.kingland.dhrm2197.entity.User">
-        select user_id as id, * from users
+        select uid as id, * from users
     </select>
+
+    <insert id="register" parameterType="com.kingland.dhrm2197.entity.User">
+        insert into users values (nextval('public.uid_increment'), #{username}, #{password});
+    </insert>
 
 </mapper>
