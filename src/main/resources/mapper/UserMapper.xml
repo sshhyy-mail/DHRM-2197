@@ -3,7 +3,11 @@
 <mapper namespace="com.kingland.dhrm2197.mapper.UserMapper">
 
     <select id="login" parameterType="String" resultType="com.kingland.dhrm2197.entity.User">
-        select * from users where username = #{param1} and password = #{param2}
+        select uid as id, * from users where username = #{param1} and password = #{param2}
+    </select>
+
+    <select id="getUser" resultType="com.kingland.dhrm2197.entity.User" parameterType="String">
+        select uid as id, * from users where username = #{param1}
     </select>
 
     <select id="getUserList" resultType="com.kingland.dhrm2197.entity.User">
