@@ -5,9 +5,9 @@ Done
 Step2. Connected to Postgres database  
 Done  
 Step3. Create a user table and use Flyway to setup the DDL  
-Done
+Done  
 Step4. Implement a username/password login by Spring Security  
-Done
+Done  
 Step5. Use Postman as this API testing tool  
-In the processing
+In the processing  
 Step6. Commit all your source code including testing scripts to Github public repository

@@ -33,7 +33,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         com.kingland.dhrm2197.entity.User k_user = userMapper.getUser(username);
         if(k_user != null){
             List<GrantedAuthority> authorities=new ArrayList<>();
-            authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + k_user.getRole()));
             return new User(k_user.getUsername(), k_user.getPassword(), authorities);
         }
 

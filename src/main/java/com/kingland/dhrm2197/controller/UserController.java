@@ -15,14 +15,6 @@ public class UserController {
     private UserService userService;
 
     @ResponseBody
-    @RequestMapping("/login")
-    public String userLogin(@RequestParam("username") String username, @RequestParam("password") String password){
-        System.out.println("login" + username);
-        System.out.println("login" + password);
-        return "login";
-    }
-
-    @ResponseBody
     @RequestMapping("/register")
     public String userRegister(@RequestParam("username") String username, @RequestParam("password") String password){
         Integer register = userService.register(username, password);

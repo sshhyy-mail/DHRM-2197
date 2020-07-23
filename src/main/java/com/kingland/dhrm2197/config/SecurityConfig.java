@@ -44,7 +44,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                     .permitAll()
                     .and()
-                .httpBasic().disable();
+                .httpBasic()
+                .and()
+                    .csrf()//
+                    .disable();
     }
 
     // Pass "/static/**" all request
