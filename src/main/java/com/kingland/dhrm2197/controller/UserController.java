@@ -1,5 +1,8 @@
 package com.kingland.dhrm2197.controller;
 
+import com.kingland.dhrm2197.entity.User;
+import com.kingland.dhrm2197.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -8,10 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 
-    @RequestMapping("/index")
-    public String index(){
-        return "index";
-    }
+    @Autowired
+    private UserService userService;
 
     @ResponseBody
     @RequestMapping("/login")
@@ -24,9 +25,11 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/register")
     public String userRegister(@RequestParam("username") String username, @RequestParam("password") String password){
-        System.out.println("register" + username);
-        System.out.println("register" + password);
-        return "register";
+        Integer register = userService.register(username, password);
+        if(register != null){
+            return register.toString();
+        }
+        return "failed";
     }
 
 }

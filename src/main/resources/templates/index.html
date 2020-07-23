@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>Index</title>
 </head>
 <body>
-
-    <h1>Home Page</h1>
-
+    <h1>Index</h1>
+    <div>
+        <a th:href="@{./user}">user</a>
+        <a th:href="@{./admin}">admin</a>
+    </div>
+    <form th:action="@{../register}">
+        <input type="text" name="username">
+        <input type="text" name="password">
+        <input type="submit" value="Submit the form">
+    </form>
 </body>
 </html>

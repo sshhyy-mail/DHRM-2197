@@ -10,7 +10,12 @@ public interface UserMapper {
 
     User login(String username, String password);
 
+    Integer register(String username, String password);
+
     User getUser(String username);
 
     List<User> getUserList();
+
+    Integer roleChange2Admin(Integer uid);
+
 }
