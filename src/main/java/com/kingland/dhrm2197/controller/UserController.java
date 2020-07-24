@@ -1,6 +1,5 @@
 package com.kingland.dhrm2197.controller;
 
-import com.kingland.dhrm2197.entity.User;
 import com.kingland.dhrm2197.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
