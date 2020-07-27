@@ -21,7 +21,7 @@ public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailu
         response.setContentType("application/json;charset=UTF-8");
         Map<String, String> map = new HashMap<>();
         map.put("code", "403");
-        map.put("msg", "login failure");
+        map.put("msg", "Login failure, please check your username/password and try again.");
         response.getWriter().append(JSON.toJSONString(map));
     }
 

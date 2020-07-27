@@ -21,7 +21,8 @@ public class MyAuthenticationSuccessHandler extends SimpleUrlAuthenticationSucce
         response.setContentType("application/json;charset=UTF-8");
         Map<String, String> map = new HashMap<>();
         map.put("code", "200");
-        map.put("msg", "user: "+authentication.getName()+", login success");
+        map.put("msg", "User: "+authentication.getName()+", login successful.");
+        map.put("roles", authentication.getAuthorities().toString());
         response.getWriter().append(JSON.toJSONString(map));
     }
 
