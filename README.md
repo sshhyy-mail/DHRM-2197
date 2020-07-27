@@ -9,5 +9,6 @@ Done
 Step4. Implement a username/password login by Spring Security  
 Done  
 Step5. Use Postman as this API testing tool  
-In the processing  
-Step6. Commit all your source code including testing scripts to Github public repository
+Done  
+Step6. Commit all your source code including testing scripts to Github public repository  
+Done  
